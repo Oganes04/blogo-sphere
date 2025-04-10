@@ -10,6 +10,7 @@
 <body>
 
     <header class="header">
+        <img src="../../images/header-bg.png" alt="">
         <div class="container">
             <div class="header__inner">
                 <a href="" class="header__logo">
@@ -37,6 +38,50 @@
                 </nav>
                 
                 <button>Контакты</button>
+    
+                <div class="burger_menu" id="burger_menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    
+    
+        <div class="header__adaptive">
+            <div class="container">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="">О нас</a>
+                        </li>
+                        <li>
+                            <a href="">Наши блогеры</a>
+                        </li>
+                        <li>
+                            <a href="">Кейсы</a>
+                        </li>
+                        <li>
+                            <a href="">Вакансии</a>
+                        </li>
+                    </ul>            
+                </nav>
+    
+                <div class="col">
+                    <span>Блогерам:</span>
+                    <a href="mailto:authors@blogo-sphere.com">authors@blogo-sphere.com</a>
+                </div>
+    
+                <div class="col">
+                    <span>г. Москва,</span>
+                    <span>Малая Сухаревская пл., 12</span>
+                </div>
+    
+                <div class="col">
+                    <span>Рекламодателям:</span>
+                    <a href="mailto:sales@blogo-sphere.com">sales@blogo-sphere.com</a>
+                </div>
             </div>
         </div>
     </header>
@@ -46,7 +91,17 @@
         <section class="offer">
             <div class="container">
                 <div class="offer__inner">
-                    <img src="../images/offer__img.png" alt="">
+                    <h1 class="offer__title">
+                        <span><strong>Партнеры</strong> для</span>
+                        <span>брендов</span>
+                        <span><span>и</span> блогеров</span>
+                    </h1>
+
+                    <div class="offer__anim">
+                        <img src="../images/offer-anim-1.jpg" alt="">
+                        <img src="../images/offer-anim-2.jpg" alt="">
+                        <img src="../images/offer-anim-3.jpg" alt="">
+                    </div>
 
                     <ul class="offer__partners">
                         <li>
@@ -109,27 +164,31 @@
                 <div class="about__inner">
                     <div class="about__slider">
                         <p>BlogoSphere предлагает брендам:</p>
-                        <div class="swiper aboutSwiper">
-                            <div class="swiper-wrapper">
-                                <div class="about__slide swiper-slide">
-                                    <h3>Лучшие цены</h3>
-                                    <p>Работаем с авторами как эксклюзивный партнер или офоициальнный селле, т.е. получаем комиссию от блогеров, а не закладываем сверху.</p>
-                                    <div class="slide-number">1 / 3</div>
-                                </div>
-                                <div class="about__slide swiper-slide">
-                                    <h3>Клиентскй сервис</h3>
-                                    <p>5 лет делаем проекты с блогерами и знаем, как выстроить процессы в работе с ними.</p>
-                                    <div class="slide-number">2 / 3</div>
-                                </div>
-                                <div class="about__slide swiper-slide">
-                                    <h3>Креатив и аналитика</h3>
-                                    <p>Творчески подходим к задачам клиентов и умеем работать на результат.</p>
-                                    <div class="slide-number">3 / 3</div>
+
+                        <div class="about__slider-slides">
+                            <div class="card" id="card1">
+                                <h3>Лучшие цены</h3>
+                                <p>Работаем с авторами как эксклюзивный партнер или офоициальнный селле, т.е. получаем комиссию от блогеров, а не закладываем сверху.</p>
+                                <div class="slide-number">1 / 3</div>
+                                <div class="next-btn">
+                                    <img src="../images/icons/icon-arrow-pink.svg" alt="">
                                 </div>
                             </div>
-
-                            <div class="aboutSwiper-next">
-                                <img src="../images/icons/icon-arrow-pink.svg" alt="">
+                            <div class="card" id="card2">
+                                <h3>Клиентскй сервис</h3>
+                                <p>5 лет делаем проекты с блогерами и знаем, как выстроить процессы в работе с ними.</p>
+                                <div class="slide-number">2 / 3</div>
+                                <div class="next-btn">
+                                    <img src="../images/icons/icon-arrow-pink.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="card" id="card3">
+                                <h3>Креатив и аналитика</h3>
+                                <p>Творчески подходим к задачам клиентов и умеем работать на результат.</p>
+                                <div class="slide-number">3 / 3</div>
+                                <div class="next-btn">
+                                    <img src="../images/icons/icon-arrow-pink.svg" alt="">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -154,27 +213,31 @@
                 <div class="about__inner">
                     <div class="about__slider">
                         <p>BlogoSphere предлагает блогерам:</p>
-                        <div class="swiper aboutSwiperBloggers">
-                            <div class="swiper-wrapper">
-                                <div class="about__slide swiper-slide">
-                                    <h3>Привлечение рекламодателей</h3>
-                                    <p>Наша киентская база включает более 500 брендов и 100 топ-агентов.</p>
-                                    <div class="slide-number">1 / 3</div>
-                                </div>
-                                <div class="about__slide swiper-slide">
-                                    <h3>Консалтинг</h3>
-                                    <p>Помогаем авторам развивать контент и не совершать ошибок в работе с брендами. Обеспечиваем полную юридическую поддержку.</p>
-                                    <div class="slide-number">2 / 3</div>
-                                </div>
-                                <div class="about__slide swiper-slide">
-                                    <h3>Копродюсирование</h3>
-                                    <p>Заинтересованы в развитии талантливых авторов. Готовы инвестировать силы, время, деньги.</p>
-                                    <div class="slide-number">3 / 3</div>
+
+                        <div class="about__slider-slides">
+                            <div class="card-2" id="card2-1">
+                                <h3>Привлечение рекламодателей</h3>
+                                <p>Наша киентская база включает более 500 брендов и 100 топ-агентов.</p>
+                                <div class="slide-number">1 / 3</div>
+                                <div class="next-btn-2">
+                                    <img src="../images/icons/icon-arrow-green.svg" alt="">
                                 </div>
                             </div>
-
-                            <div class="aboutSwiper-next">
-                                <img src="../images/icons/icon-arrow-green.svg" alt="">
+                            <div class="card-2" id="card2-2">
+                                <h3>Консалтинг</h3>
+                                    <p>Помогаем авторам развивать контент и не совершать ошибок в работе с брендами. Обеспечиваем полную юридическую поддержку.</p>
+                                <div class="slide-number">2 / 3</div>
+                                <div class="next-btn-2">
+                                    <img src="../images/icons/icon-arrow-green.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="card-2" id="card3-2">
+                                <h3>Копродюсирование</h3>
+                                <p>Заинтересованы в развитии талантливых авторов. Готовы инвестировать силы, время, деньги.</p>
+                                <div class="slide-number">3 / 3</div>
+                                <div class="next-btn-2">
+                                    <img src="../images/icons/icon-arrow-green.svg" alt="">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -572,7 +635,14 @@
     
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://rawgit.com/RobinHerbots/jquery.inputmask/3.x/dist/jquery.inputmask.bundle.js"></script>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+
+    <!-- <script src="https://rawgit.com/RobinHerbots/jquery.inputmask/3.x/dist/jquery.inputmask.bundle.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
 </body>
