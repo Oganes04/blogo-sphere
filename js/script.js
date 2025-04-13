@@ -94,7 +94,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const nextButtons = document.querySelectorAll('.next-btn');
         nextButtons.forEach(btn => {
             btn.addEventListener('click', () => {
-                console.log('click');
                 currentIndex = (currentIndex + 1) % cards.length;
                 updateCards();
             });
@@ -129,7 +128,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const nextButtons = document.querySelectorAll('.next-btn-2');
         nextButtons.forEach(btn => {
             btn.addEventListener('click', () => {
-                console.log('click');
                 currentIndex = (currentIndex + 1) % cards.length;
                 updateCards();
             });
@@ -148,4 +146,42 @@ $("#burger_menu").click(function() {
     $(this).toggleClass('open');
     $("#catalogContentAdaptive").toggleClass("open");
     $("html").toggleClass("hidden");
+});
+
+
+$(".header__adaptive nav ul li ").click(function() {
+  $('#burger_menu').removeClass('open');
+  $("html").removeClass("hidden");
+});
+
+$(".header__contacts-btn").click(function() {
+  $('.header__contacts').toggleClass('open');
+});
+
+
+
+//========================== Функционал popup окон ====================
+
+function openPopup(popup) {
+  $('.popup').hide();
+  $('.overlay').show();
+  $('html').css('overflow', 'hidden');
+  popup.show();
+}
+
+function closePopup(closeBtn) {
+  $('.overlay').hide();
+  closeBtn.parent().hide();
+  $('html').css('overflow-y', 'auto');
+}
+$(document).on('click', '.popup_close', function(e) {
+  closePopup($(this));
+});
+
+$('.popup-bloggers-btn').click(function() {
+  openPopup($('.popup-bloggers'));
+});
+
+$('.popup-brands-btn').click(function() {
+  openPopup($('.popup-brands'));
 });

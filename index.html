@@ -13,31 +13,31 @@
         <img src="../../images/header-bg.png" alt="">
         <div class="container">
             <div class="header__inner">
-                <a href="" class="header__logo">
+                <a href="/" class="header__logo">
                     <img src="../../images/logo.png" alt="">
                 </a>
     
                 <nav>
                     <ul>
                         <li>
-                            <a href="">О нас</a>
+                            <a href="#about">О нас</a>
                         </li>
                         <span>/</span>
                         <li>
-                            <a href="">Наши блогеры</a>
+                            <a href="/bloggers.html">Наши блогеры</a>
                         </li>
                         <span>/</span>
                         <li>
-                            <a href="">Кейсы</a>
+                            <a href="#cases">Кейсы</a>
                         </li>
                         <span>/</span>
                         <li>
-                            <a href="">Вакансии</a>
+                            <a href="/vacancy.html">Вакансии</a>
                         </li>
                     </ul>
                 </nav>
                 
-                <button>Контакты</button>
+                <button class="header__contacts-btn">Контакты</button>
     
                 <div class="burger_menu" id="burger_menu">
                     <span></span>
@@ -54,16 +54,16 @@
                 <nav>
                     <ul>
                         <li>
-                            <a href="">О нас</a>
+                            <a href="#about">О нас</a>
                         </li>
                         <li>
-                            <a href="">Наши блогеры</a>
+                            <a href="/bloggers.html">Наши блогеры</a>
                         </li>
                         <li>
-                            <a href="">Кейсы</a>
+                            <a href="#cases">Кейсы</a>
                         </li>
                         <li>
-                            <a href="">Вакансии</a>
+                            <a href="/vacancy.html">Вакансии</a>
                         </li>
                     </ul>            
                 </nav>
@@ -81,6 +81,30 @@
                 <div class="col">
                     <span>Рекламодателям:</span>
                     <a href="mailto:sales@blogo-sphere.com">sales@blogo-sphere.com</a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="header__contacts">
+            <div class="container">
+                <div class="header__contacts-inner">
+    
+                    <div class="col">
+                        <span>г. Москва,</span>
+                        <span>Малая Сухаревская пл., 12</span>
+                        <a href="tel:+74952151450">+7 (495) 215 14 50</a>
+                    </div>
+    
+                    <div class="col">
+                        <strong>Рекламодателям:</strong>
+                        <a href="mailto:sales@blogo-sphere.com">sales@blogo-sphere.com</a>
+                    </div>
+    
+                    <div class="col">
+                        <strong>Блогерам</strong>
+                        <a href="mailto:authors@blogo-sphere.com">authors@blogo-sphere.com</a>
+                    </div>
+    
                 </div>
             </div>
         </div>
@@ -158,7 +182,7 @@
         </section>
 
 
-        <section class="about">
+        <section class="about" id="about">
             <div class="container">
                 <h2>О нас</h2>
                 <div class="about__inner">
@@ -202,6 +226,8 @@
                         <textarea name="" id="" placeholder="Опишите ваш запрос"></textarea>
                         <button>Отправить</button>
                     </form>
+
+                    <button class="adaptive popup-bloggers-btn">Связаться для блогеров</button>
                 </div>
             </div>
         </section>
@@ -251,6 +277,9 @@
                         <textarea name="" id="" placeholder="Опишите ваш запрос"></textarea>
                         <button>Отправить</button>
                     </form>
+
+                    <button class="adaptive popup-brands-btn">Связаться для брендов</button>
+
                 </div>
             </div>
         </section>
@@ -465,7 +494,7 @@
         </section>
 
 
-        <section class="cases">
+        <section class="cases" id="cases">
             <div class="container">
                 <div class="cases__inner">
 
@@ -631,6 +660,88 @@
         </div>
 
     </footer>
+
+    
+
+    
+
+    <div class="overlay"></div>
+
+    
+
+    
+
+    <section class="popup popup-bloggers">
+
+        <div class="popup_close">
+
+    		<svg class="icon-14" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+    			<path d="M15 1L1 15M1 1L15 15" stroke="#252536" stroke-width="2" stroke-linecap="round"></path>
+
+    		</svg>
+
+    	</div>
+
+    
+
+        <form action="">
+
+            <span>Связаться для блогеров</span>
+
+            <input type="text" placeholder="Имя">
+
+            <input type="text" placeholder="Название компании">
+
+            <input type="text" placeholder="Ссылка">
+
+            <input type="text" placeholder="Email">
+
+            <textarea name="" id="" placeholder="Опишите ваш запрос"></textarea>
+
+            <button>Отправить</button>
+
+        </form>
+
+    </section>
+
+    
+
+    
+
+    <section class="popup popup-brands">
+
+        <div class="popup_close">
+
+    		<svg class="icon-14" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+    			<path d="M15 1L1 15M1 1L15 15" stroke="#252536" stroke-width="2" stroke-linecap="round"></path>
+
+    		</svg>
+
+    	</div>
+
+    
+
+        <form action="">
+
+            <span>Связаться для брендов</span>
+
+            <input type="text" placeholder="Имя">
+
+            <input type="text" placeholder="Название компании">
+
+            <input type="text" placeholder="Ссылка">
+
+            <input type="text" placeholder="Email">
+
+            <textarea name="" id="" placeholder="Опишите ваш запрос"></textarea>
+
+            <button>Отправить</button>
+
+        </form>
+
+    </section>
 
     
 

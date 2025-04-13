@@ -250,6 +250,135 @@ section h2 {
   overflow: hidden;
 }
 
+/* ========================== Cтили для popup окон ==================== */
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.3960784314);
+  z-index: 99998;
+  display: none;
+}
+
+.popup {
+  width: 95%;
+  padding: 40px 30px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  z-index: 99999;
+  display: none;
+}
+
+.popup form {
+  width: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+}
+
+.popup form > span {
+  font-size: clamp(8.3325px, 1.3020833333vw, 25px);
+  font-weight: 700;
+  font-family: custom_179;
+  font-style: normal;
+  text-decoration: none;
+  text-transform: none;
+  color: rgb(7, 11, 20);
+  display: inline-block;
+  margin-bottom: clamp(13.332px, 2.0833333333vw, 40px);
+  text-align: center;
+}
+
+.popup form input {
+  width: 100%;
+  height: clamp(23.331px, 3.6458333333vw, 70px);
+  padding: clamp(6.666px, 1.0416666667vw, 20px) clamp(6.666px, 1.0416666667vw, 20px) clamp(6.666px, 1.0416666667vw, 20px) clamp(6.666px, 1.0416666667vw, 20px);
+  font-style: normal;
+  font-weight: 500;
+  color: rgb(50, 56, 68);
+  font-size: clamp(4.9995px, 0.78125vw, 15px);
+  background-color: #fff;
+  border: 1px solid rgb(7, 11, 20);
+}
+
+.popup form input:not(:last-child) {
+  margin-bottom: clamp(3.333px, 0.5208333333vw, 10px);
+}
+
+.popup form textarea {
+  width: 100%;
+  height: clamp(23.331px, 3.6458333333vw, 70px);
+  padding: clamp(6.666px, 1.0416666667vw, 20px) clamp(6.666px, 1.0416666667vw, 20px) clamp(6.666px, 1.0416666667vw, 20px) clamp(6.666px, 1.0416666667vw, 20px);
+  font-style: normal;
+  font-weight: 500;
+  color: rgb(50, 56, 68);
+  font-size: clamp(4.9995px, 0.78125vw, 15px);
+  background-color: #fff;
+  height: clamp(47.3286px, 7.3958333333vw, 142px);
+  margin-bottom: clamp(9.999px, 1.5625vw, 30px);
+  border: 1px solid rgb(7, 11, 20);
+}
+
+.popup form textarea:focus {
+  resize: none;
+  outline: none;
+}
+
+.popup form button {
+  width: 100%;
+  height: clamp(22.3311px, 3.4895833333vw, 67px);
+  border-radius: clamp(16.665px, 2.6041666667vw, 50px);
+  background-color: rgb(7, 11, 20);
+  border: 1px solid rgb(7, 11, 20);
+  box-shadow: rgb(255, 255, 255) 0px 0px 0px 0px inset;
+  font-family: custom_179;
+  font-style: normal;
+  font-weight: 700;
+  color: #FFF;
+  font-size: clamp(8.3325px, 1.3020833333vw, 25px);
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.popup form button:active {
+  background-color: rgb(231, 75, 215);
+  color: rgb(7, 11, 20);
+}
+
+.popup__header {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.popup .popup_close {
+  position: absolute;
+  right: clamp(9.999px, 1.5625vw, 30px);
+  top: clamp(9.999px, 1.5625vw, 30px);
+}
+
+.popup .popup_close > svg {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
 .header {
   position: sticky;
   top: 0;
@@ -275,6 +404,55 @@ section h2 {
   z-index: 10;
 }
 
+.header__contacts {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgb(231, 75, 215);
+  color: #FFF;
+  padding-top: clamp(59.994px, 9.375vw, 180px);
+  display: none;
+}
+
+.header__contacts.open {
+  display: block;
+}
+
+.header__contacts-inner {
+  padding-top: clamp(13.332px, 2.0833333333vw, 40px);
+  padding-bottom: clamp(13.332px, 2.0833333333vw, 40px);
+  border-top: 2px solid #FFF;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: flex-start;
+  gap: clamp(66.66px, 10.4166666667vw, 200px);
+}
+
+.header__contacts-inner .col {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(3.333px, 0.5208333333vw, 10px);
+}
+
+.header__contacts-inner .col span {
+  font-size: clamp(6.666px, 1.0416666667vw, 20px);
+}
+
+.header__contacts-inner .col a {
+  display: inline-block;
+  font-size: clamp(6.666px, 1.0416666667vw, 20px);
+  color: #FFF;
+  text-decoration: underline;
+}
+
 .header__inner {
   padding: clamp(16.665px, 2.6041666667vw, 50px) clamp(0px, 0vw, 0px) clamp(16.665px, 2.6041666667vw, 50px) clamp(0px, 0vw, 0px);
   display: -webkit-box;
@@ -284,6 +462,8 @@ section h2 {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
+  z-index: 10;
 }
 
 .header__inner nav ul {
@@ -351,6 +531,18 @@ section h2 {
   align-items: center;
   justify-content: center;
   background-color: rgb(231, 75, 215);
+  border: 1px solid transparent;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.header__inner button:active {
+  color: rgb(231, 75, 215);
+  background-color: transparent;
+  border-color: rgb(231, 75, 215);
 }
 
 .footer {
@@ -539,6 +731,10 @@ section h2 {
   align-items: flex-start;
   justify-content: space-between;
   position: relative;
+}
+
+.about__inner > button.adaptive {
+  display: none;
 }
 
 .about__slider {
@@ -1196,7 +1392,7 @@ section h2 {
   margin-bottom: clamp(16.665px, 2.6041666667vw, 50px);
 }
 
-.vacancy__info button {
+.vacancy__info a {
   width: 100%;
   height: clamp(22.3311px, 3.4895833333vw, 67px);
   border-radius: clamp(16.665px, 2.6041666667vw, 50px);
@@ -1223,7 +1419,7 @@ section h2 {
   margin-bottom: clamp(9.999px, 1.5625vw, 30px);
 }
 
-.vacancy__info button svg {
+.vacancy__info a svg {
   width: clamp(9.3324px, 1.4583333333vw, 28px);
   height: clamp(9.3324px, 1.4583333333vw, 28px);
   -webkit-transition: all 0.3s ease 0s;
@@ -1233,16 +1429,62 @@ section h2 {
   transition: all 0.3s ease 0s;
 }
 
-.vacancy__info button:active {
+.vacancy__info a:active {
   background-color: rgb(209, 238, 163);
   color: rgb(7, 11, 20);
 }
 
-.vacancy__info button:active svg {
+.vacancy__info a:active svg {
   fill: rgb(7, 11, 20);
 }
 
-.vacancy ul {
+.vacancy__info a.outline {
+  width: 100%;
+  height: clamp(22.3311px, 3.4895833333vw, 67px);
+  border-radius: clamp(16.665px, 2.6041666667vw, 50px);
+  font-family: custom_179;
+  font-style: normal;
+  color: rgb(7, 11, 20);
+  border: 1px solid rgb(7, 11, 20);
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(6.666px, 1.0416666667vw, 20px);
+  font-size: clamp(8.6658px, 1.3541666667vw, 26px);
+  font-weight: 500;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  margin-bottom: clamp(9.999px, 1.5625vw, 30px);
+  background-color: rgb(209, 238, 163);
+}
+
+.vacancy__info a.outline svg {
+  width: clamp(9.3324px, 1.4583333333vw, 28px);
+  height: clamp(9.3324px, 1.4583333333vw, 28px);
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.vacancy__info a.outline:active {
+  background-color: rgb(209, 238, 163);
+  color: rgb(7, 11, 20);
+}
+
+.vacancy__info a.outline:active svg {
+  fill: rgb(7, 11, 20);
+}
+
+.vacancy .vacancy__inner > ul {
   flex: 1;
   display: -ms-grid;
   display: -moz-grid;
@@ -1251,7 +1493,7 @@ section h2 {
   gap: clamp(26.664px, 4.1666666667vw, 80px);
 }
 
-.vacancy ul li article {
+.vacancy .vacancy__inner > ul li article {
   border: 1px solid rgb(7, 11, 20);
   padding: clamp(13.332px, 2.0833333333vw, 40px) clamp(13.332px, 2.0833333333vw, 40px) clamp(13.332px, 2.0833333333vw, 40px) clamp(13.332px, 2.0833333333vw, 40px);
   height: clamp(130.3203px, 20.3645833333vw, 391px);
@@ -1263,16 +1505,117 @@ section h2 {
   flex-direction: column;
 }
 
-.vacancy ul li article h3 {
+.vacancy .vacancy__inner > ul li article h3 {
   font-size: clamp(10.6656px, 1.6666666667vw, 32px);
   font-weight: 700;
 }
 
-.vacancy ul li article span {
+.vacancy .vacancy__inner > ul li article span {
   display: block;
   margin-top: auto;
   font-size: clamp(9.3324px, 1.4583333333vw, 28px);
   font-weight: 300;
+}
+
+.page__vacancy h1 {
+  font-family: custom_179;
+  font-weight: 800;
+  font-size: clamp(19.998px, 3.125vw, 60px);
+  line-height: 50px;
+  letter-spacing: -0.4px;
+  font-style: normal;
+  color: rgb(7, 11, 20);
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: left;
+  margin-bottom: clamp(9.999px, 1.5625vw, 30px);
+}
+
+.page__vacancy .vacancy .vacancy__inner > ul {
+  grid-template-columns: 1fr;
+}
+
+.page__vacancy .vacancy .vacancy__inner > ul > li {
+  position: relative;
+  background-color: rgb(209, 238, 163);
+}
+
+.page__vacancy .vacancy .vacancy__inner > ul > li::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  right: clamp(-16.665px, -2.6041666667vw, -50px);
+  top: clamp(-16.665px, -2.6041666667vw, -50px);
+  background-color: #000;
+  z-index: 9;
+}
+
+.page__vacancy .vacancy .vacancy__inner > ul > li article {
+  border: 1px solid rgb(7, 11, 20);
+  padding: clamp(13.332px, 2.0833333333vw, 40px) clamp(13.332px, 2.0833333333vw, 40px) clamp(13.332px, 2.0833333333vw, 40px) clamp(13.332px, 2.0833333333vw, 40px);
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  position: relative;
+  z-index: 100;
+  background-color: rgb(209, 238, 163);
+}
+
+.page__vacancy .vacancy .vacancy__inner > ul > li article h2 {
+  font-size: clamp(15.9984px, 2.5vw, 48px);
+  font-weight: 700;
+  margin-bottom: clamp(10.6656px, 1.6666666667vw, 32px);
+}
+
+.page__vacancy .vacancy .vacancy__inner > ul > li article h3 {
+  font-size: clamp(10.6656px, 1.6666666667vw, 32px);
+  font-weight: 700;
+  margin-bottom: clamp(13.332px, 2.0833333333vw, 40px);
+}
+
+.page__vacancy .vacancy .vacancy__inner > ul > li article > ul {
+  margin-bottom: clamp(17.3316px, 2.7083333333vw, 52px);
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(4.9995px, 0.78125vw, 15px);
+  padding-left: 1rem;
+}
+
+.page__vacancy .vacancy .vacancy__inner > ul > li article > ul li {
+  list-style-type: disc;
+  padding-left: clamp(9.999px, 1.5625vw, 30px);
+  font-size: clamp(7.9992px, 1.25vw, 24px);
+  font-weight: 400;
+}
+
+.page__bloggers h1 {
+  font-family: custom_179;
+  font-weight: 800;
+  font-size: clamp(19.998px, 3.125vw, 60px);
+  line-height: 50px;
+  letter-spacing: -0.4px;
+  font-style: normal;
+  color: #FFF;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: left;
+  margin-bottom: clamp(9.999px, 1.5625vw, 30px);
+}
+
+.page__bloggers .bloggers__item-header h2 {
+  font-size: clamp(10.6656px, 1.6666666667vw, 32px);
+  color: #FFF;
+  font-weight: 800;
+  margin: 0;
 }
 
 .header__adaptive {
@@ -1352,6 +1695,70 @@ section h2 {
     margin-bottom: clamp(15px, 4.6875vw, 30px);
   }
 
+  .popup form > span {
+    font-size: clamp(12.5px, 3.90625vw, 25px);
+  }
+
+  .popup form > span {
+    margin-bottom: clamp(20px, 6.25vw, 40px);
+  }
+
+  .popup form input {
+    height: clamp(35px, 10.9375vw, 70px);
+  }
+
+  .popup form input {
+    padding: clamp(10px, 3.125vw, 20px) clamp(10px, 3.125vw, 20px) clamp(10px, 3.125vw, 20px) clamp(10px, 3.125vw, 20px);
+  }
+
+  .popup form input {
+    font-size: clamp(7.5px, 2.34375vw, 15px);
+  }
+
+  .popup form input:not(:last-child) {
+    margin-bottom: clamp(5px, 1.5625vw, 10px);
+  }
+
+  .popup form textarea {
+    height: clamp(35px, 10.9375vw, 70px);
+  }
+
+  .popup form textarea {
+    padding: clamp(10px, 3.125vw, 20px) clamp(10px, 3.125vw, 20px) clamp(10px, 3.125vw, 20px) clamp(10px, 3.125vw, 20px);
+  }
+
+  .popup form textarea {
+    font-size: clamp(7.5px, 2.34375vw, 15px);
+  }
+
+  .popup form textarea {
+    height: clamp(71px, 22.1875vw, 142px);
+  }
+
+  .popup form textarea {
+    margin-bottom: clamp(15px, 4.6875vw, 30px);
+  }
+
+  .popup form button {
+    height: clamp(33.5px, 10.46875vw, 67px);
+  }
+
+  .popup form button {
+    border-radius: clamp(25px, 7.8125vw, 50px);
+  }
+
+  .popup form button {
+    font-size: clamp(12.5px, 3.90625vw, 25px);
+  }
+
+  .popup .popup_close {
+    right: clamp(15px, 4.6875vw, 30px);
+  }
+
+  .popup .popup_close {
+    top: clamp(15px, 4.6875vw, 30px);
+  }
+
   .header__logo {
     width: clamp(156.5px, 48.90625vw, 313px);
   }
@@ -1370,6 +1777,34 @@ section h2 {
 
   .header > img {
     height: clamp(60px, 18.75vw, 120px);
+  }
+
+  .header__contacts {
+    padding-top: clamp(90px, 28.125vw, 180px);
+  }
+
+  .header__contacts-inner {
+    padding-top: clamp(20px, 6.25vw, 40px);
+  }
+
+  .header__contacts-inner {
+    padding-bottom: clamp(20px, 6.25vw, 40px);
+  }
+
+  .header__contacts-inner {
+    gap: clamp(100px, 31.25vw, 200px);
+  }
+
+  .header__contacts-inner .col {
+    gap: clamp(5px, 1.5625vw, 10px);
+  }
+
+  .header__contacts-inner .col span {
+    font-size: clamp(10px, 3.125vw, 20px);
+  }
+
+  .header__contacts-inner .col a {
+    font-size: clamp(10px, 3.125vw, 20px);
   }
 
   .header__inner {
@@ -1908,52 +2343,124 @@ section h2 {
     margin-bottom: clamp(25px, 7.8125vw, 50px);
   }
 
-  .vacancy__info button {
+  .vacancy__info a {
     height: clamp(33.5px, 10.46875vw, 67px);
   }
 
-  .vacancy__info button {
+  .vacancy__info a {
     border-radius: clamp(25px, 7.8125vw, 50px);
   }
 
-  .vacancy__info button {
+  .vacancy__info a {
     gap: clamp(10px, 3.125vw, 20px);
   }
 
-  .vacancy__info button {
+  .vacancy__info a {
     font-size: clamp(13px, 4.0625vw, 26px);
   }
 
-  .vacancy__info button {
+  .vacancy__info a {
     margin-bottom: clamp(15px, 4.6875vw, 30px);
   }
 
-  .vacancy__info button svg {
+  .vacancy__info a svg {
     width: clamp(14px, 4.375vw, 28px);
   }
 
-  .vacancy__info button svg {
+  .vacancy__info a svg {
     height: clamp(14px, 4.375vw, 28px);
   }
 
-  .vacancy ul {
+  .vacancy__info a.outline {
+    height: clamp(33.5px, 10.46875vw, 67px);
+  }
+
+  .vacancy__info a.outline {
+    border-radius: clamp(25px, 7.8125vw, 50px);
+  }
+
+  .vacancy__info a.outline {
+    gap: clamp(10px, 3.125vw, 20px);
+  }
+
+  .vacancy__info a.outline {
+    font-size: clamp(13px, 4.0625vw, 26px);
+  }
+
+  .vacancy__info a.outline {
+    margin-bottom: clamp(15px, 4.6875vw, 30px);
+  }
+
+  .vacancy__info a.outline svg {
+    width: clamp(14px, 4.375vw, 28px);
+  }
+
+  .vacancy__info a.outline svg {
+    height: clamp(14px, 4.375vw, 28px);
+  }
+
+  .vacancy .vacancy__inner > ul {
     gap: clamp(40px, 12.5vw, 80px);
   }
 
-  .vacancy ul li article {
+  .vacancy .vacancy__inner > ul li article {
     padding: clamp(20px, 6.25vw, 40px) clamp(20px, 6.25vw, 40px) clamp(20px, 6.25vw, 40px) clamp(20px, 6.25vw, 40px);
   }
 
-  .vacancy ul li article {
+  .vacancy .vacancy__inner > ul li article {
     height: clamp(195.5px, 61.09375vw, 391px);
   }
 
-  .vacancy ul li article h3 {
+  .vacancy .vacancy__inner > ul li article h3 {
     font-size: clamp(16px, 5vw, 32px);
   }
 
-  .vacancy ul li article span {
+  .vacancy .vacancy__inner > ul li article span {
     font-size: clamp(14px, 4.375vw, 28px);
+  }
+
+  .page__vacancy .vacancy .vacancy__inner > ul > li::after {
+    right: clamp(-25px, -7.8125vw, -50px);
+  }
+
+  .page__vacancy .vacancy .vacancy__inner > ul > li::after {
+    top: clamp(-25px, -7.8125vw, -50px);
+  }
+
+  .page__vacancy .vacancy .vacancy__inner > ul > li article {
+    padding: clamp(20px, 6.25vw, 40px) clamp(20px, 6.25vw, 40px) clamp(20px, 6.25vw, 40px) clamp(20px, 6.25vw, 40px);
+  }
+
+  .page__vacancy .vacancy .vacancy__inner > ul > li article h2 {
+    font-size: clamp(24px, 7.5vw, 48px);
+  }
+
+  .page__vacancy .vacancy .vacancy__inner > ul > li article h2 {
+    margin-bottom: clamp(16px, 5vw, 32px);
+  }
+
+  .page__vacancy .vacancy .vacancy__inner > ul > li article h3 {
+    font-size: clamp(16px, 5vw, 32px);
+  }
+
+  .page__vacancy .vacancy .vacancy__inner > ul > li article h3 {
+    margin-bottom: clamp(20px, 6.25vw, 40px);
+  }
+
+  .page__vacancy .vacancy .vacancy__inner > ul > li article > ul {
+    margin-bottom: clamp(26px, 8.125vw, 52px);
+  }
+
+  .page__vacancy .vacancy .vacancy__inner > ul > li article > ul {
+    gap: clamp(7.5px, 2.34375vw, 15px);
+  }
+
+  .page__vacancy .vacancy .vacancy__inner > ul > li article > ul li {
+    padding-left: clamp(15px, 4.6875vw, 30px);
+  }
+
+  .page__vacancy .vacancy .vacancy__inner > ul > li article > ul li {
+    font-size: clamp(12px, 3.75vw, 24px);
   }
 
   #burger_menu {
@@ -2102,6 +2609,44 @@ section h2 {
 
   .about form {
     display: none;
+  }
+
+  .about__inner {
+    flex-direction: column;
+  }
+
+  .about__inner > button.adaptive {
+    margin-top: 30px;
+    width: 100%;
+    background-color: rgb(29, 29, 29);
+    border-radius: 50px;
+    border-width: 1px;
+    border-color: rgb(7, 11, 20);
+    font-family: custom_179;
+    font-weight: 500;
+    font-style: normal;
+    color: rgb(231, 75, 215);
+    display: block;
+    height: 58px;
+  }
+
+  .about-bloggers .about__inner {
+    flex-direction: column;
+  }
+
+  .about-bloggers .about__inner > button.adaptive {
+    margin-top: 30px;
+    width: 100%;
+    background-color: rgb(29, 29, 29);
+    border-radius: 50px;
+    border-width: 1px;
+    border-color: rgb(7, 11, 20);
+    font-family: custom_179;
+    font-weight: 500;
+    font-style: normal;
+    color: rgb(209, 238, 163);
+    display: block;
+    height: 58px;
   }
 
   .bloggers__inner {
@@ -2399,8 +2944,19 @@ section h2 {
 }
 
 @media (hover: hover) {
+  .popup form button:hover {
+    background-color: rgb(231, 75, 215);
+    color: rgb(7, 11, 20);
+  }
+
   .header__inner nav ul a:hover::after {
     opacity: 1;
+  }
+
+  .header__inner button:hover {
+    color: rgb(231, 75, 215);
+    background-color: transparent;
+    border-color: rgb(231, 75, 215);
   }
 
   .about.about-bloggers form button:hover {
@@ -2430,12 +2986,21 @@ section h2 {
     fill: rgb(7, 11, 20);
   }
 
-  .vacancy__info button:hover {
+  .vacancy__info a:hover {
     background-color: rgb(209, 238, 163);
     color: rgb(7, 11, 20);
   }
 
-  .vacancy__info button:hover svg {
+  .vacancy__info a:hover svg {
+    fill: rgb(7, 11, 20);
+  }
+
+  .vacancy__info a.outline:hover {
+    background-color: rgb(7, 11, 20);
+    color: rgb(209, 238, 163);
+  }
+
+  .vacancy__info a.outline:hover svg {
     fill: rgb(7, 11, 20);
   }
 }
