@@ -1392,6 +1392,52 @@ section h2 {
   margin-bottom: clamp(16.665px, 2.6041666667vw, 50px);
 }
 
+.vacancy__info button {
+  width: 100%;
+  height: clamp(22.3311px, 3.4895833333vw, 67px);
+  border-radius: clamp(16.665px, 2.6041666667vw, 50px);
+  font-family: custom_179;
+  font-style: normal;
+  color: rgb(209, 238, 163);
+  border: 1px solid rgb(7, 11, 20);
+  background-color: rgb(7, 11, 20);
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(6.666px, 1.0416666667vw, 20px);
+  font-size: clamp(8.6658px, 1.3541666667vw, 26px);
+  font-weight: 500;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  margin-bottom: clamp(9.999px, 1.5625vw, 30px);
+}
+
+.vacancy__info button svg {
+  width: clamp(9.3324px, 1.4583333333vw, 28px);
+  height: clamp(9.3324px, 1.4583333333vw, 28px);
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.vacancy__info button:active {
+  background-color: rgb(209, 238, 163);
+  color: rgb(7, 11, 20);
+}
+
+.vacancy__info button:active svg {
+  fill: rgb(7, 11, 20);
+}
+
 .vacancy__info a {
   width: 100%;
   height: clamp(22.3311px, 3.4895833333vw, 67px);
@@ -1532,7 +1578,11 @@ section h2 {
 }
 
 .page__vacancy .vacancy .vacancy__inner > ul {
+  display: -ms-grid;
+  display: -moz-grid;
+  display: grid;
   grid-template-columns: 1fr;
+  width: 100%;
 }
 
 .page__vacancy .vacancy .vacancy__inner > ul > li {
@@ -2343,6 +2393,34 @@ section h2 {
     margin-bottom: clamp(25px, 7.8125vw, 50px);
   }
 
+  .vacancy__info button {
+    height: clamp(33.5px, 10.46875vw, 67px);
+  }
+
+  .vacancy__info button {
+    border-radius: clamp(25px, 7.8125vw, 50px);
+  }
+
+  .vacancy__info button {
+    gap: clamp(10px, 3.125vw, 20px);
+  }
+
+  .vacancy__info button {
+    font-size: clamp(13px, 4.0625vw, 26px);
+  }
+
+  .vacancy__info button {
+    margin-bottom: clamp(15px, 4.6875vw, 30px);
+  }
+
+  .vacancy__info button svg {
+    width: clamp(14px, 4.375vw, 28px);
+  }
+
+  .vacancy__info button svg {
+    height: clamp(14px, 4.375vw, 28px);
+  }
+
   .vacancy__info a {
     height: clamp(33.5px, 10.46875vw, 67px);
   }
@@ -2701,7 +2779,8 @@ section h2 {
     flex-direction: column;
   }
 
-  .vacancy ul {
+  .vacancy ul,
+  .vacancy .vacancy__inner > ul {
     display: none;
   }
 
@@ -2810,6 +2889,14 @@ section h2 {
 
   .burger_menu {
     display: block;
+  }
+
+  .page__vacancy .vacancy .vacancy__inner > ul > li::after {
+    display: none;
+  }
+
+  .vacancy__info {
+    position: static;
   }
 }
 
@@ -2983,6 +3070,15 @@ section h2 {
   }
 
   .cases__aside button:hover svg {
+    fill: rgb(7, 11, 20);
+  }
+
+  .vacancy__info button:hover {
+    background-color: rgb(209, 238, 163);
+    color: rgb(7, 11, 20);
+  }
+
+  .vacancy__info button:hover svg {
     fill: rgb(7, 11, 20);
   }
 
